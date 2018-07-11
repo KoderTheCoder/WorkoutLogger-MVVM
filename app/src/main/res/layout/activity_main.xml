@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingBottom="60dp"
+    android:paddingLeft="60dp"
+    android:paddingRight="60dp"
+    android:background="@drawable/background"
+    >
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/homepage_logo"
+        android:layout_marginBottom="10dp"
+        />
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="85dp"
+        android:text="CREATE WORKOUT"
+        android:id="@+id/createWorkout"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/main_button"
+        android:textColor="#ffffff"
+        />
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="85dp"
+        android:text="CHOOSE WORKOUT"
+        android:id="@+id/chooseWorkout"
+        android:background="@drawable/main_button"
+        android:textColor="#ffffff"
+        />
+</LinearLayout>

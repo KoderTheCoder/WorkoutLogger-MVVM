@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="createWorkout"
+            type="com.example.koder.workoutapp.ViewModel.CreateWorkoutViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        >
+
+        <TextView
+
+            android:id="@+id/prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "@{createWorkout.prompt}"
+            android:textSize="30sp"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/headingText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+
+            android:id="@+id/enterActivityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@{createWorkout.hint}"
+            android:text="@{createWorkout.createWorkoutInput}"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/prompt"
+            app:addTextChangedListener="@{createWorkout.inputTextWatcher}"
+            />
+
+        <EditText
+
+            android:id="@+id/enterRepitions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter Repetitions"
+            android:textColor="#ffffff"
+            android:layout_marginTop="30dp"
+            android:inputType="number"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enterActivityName"
+            app:addTextChangedListener="@{createWorkout.repitionsTextWatcher}"
+            />
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{createWorkout.state}"
+            android:background="@drawable/main_button"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="50dp"
+            android:onClick="@{createWorkout::onNextClick}"
+            app:layout_constraintTop_toBottomOf="@id/enterRepitions"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+        <Button
+            android:id="@+id/finishedButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/finished"
+            android:background="@drawable/main_button"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="20dp"
+            android:onClick="@{createWorkout::onFinishedClick}"
+            app:layout_constraintTop_toBottomOf="@id/next_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

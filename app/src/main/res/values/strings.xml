@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WorkoutApp</string>
+    <string name="next">next</string>
+    <string name="finished">Finished</string>
+    <string name="prompt">Workout Name</string>
+    <string name="timerText">6</string>
+</resources>
